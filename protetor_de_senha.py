@@ -1,3 +1,4 @@
+import time
 import random
 
 lista_1 =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -56,6 +57,7 @@ Ver senhas(V)
             random.shuffle(listas_embaralhadas)
             nova_senha_1 = ''.join(str(e[0]) + str(e[1]) for e in listas_embaralhadas)
             print(f'A senha está pronta {nova_senha_1}')
+            time.sleep(5)
             escreva = f'{nova_senha_1} = {senha}'
             adicionar_senha_arquivo(escreva)
     elif resposta == '10':
@@ -66,12 +68,14 @@ Ver senhas(V)
             random.shuffle(listas_embaralhadas)
             nova_senha_2 = ''.join(str(e[0]) + str(e[1]) for e in listas_embaralhadas)
             print(f'A senha está pronta {nova_senha_2}')
+            time.sleep(5)
             escreva = f'{nova_senha_2} = {senha}'
             adicionar_senha_arquivo(escreva)
 
     elif resposta == 'V':
         print('Ok, agora vamos mostrar as senhas já registradas!')
         listar_senhas_arquivo()
+        time.sleep(10)
 
 
 Protetor_de_Senhas()
